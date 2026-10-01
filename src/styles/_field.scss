@@ -1,0 +1,35 @@
+@use './tokens' as tokens;
+
+.uk-field {
+  display: flex;
+  flex-direction: column;
+  gap: tokens.$spacing-sm;
+}
+.uk-field__input {
+  padding: tokens.$spacing-sm;
+}
+.uk-field__input[readonly] {
+  cursor: pointer;
+  background: tokens.$colour-surface;
+}
+.uk-field__input[aria-invalid='true'] {
+  border-color: tokens.$colour-error;
+}
+
+.uk-label {
+  font-weight: 600;
+}
+.uk-label--required::after {
+  content: ' *';
+  color: tokens.$colour-error;
+}
+
+.uk-helper {
+  font-size: 12px;
+}
+.uk-helper--neutral {
+  color: tokens.$colour-muted;
+}
+.uk-helper--error {
+  color: tokens.$colour-error;
+}

@@ -1,0 +1,61 @@
+@use './tokens' as tokens;
+
+.uk-calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.uk-day {
+  padding: tokens.$spacing-sm;
+  border: 0;
+  background: none;
+}
+.uk-day--selected {
+  background: tokens.$colour-primary;
+  color: #fff;
+}
+.uk-day--in-range {
+  background: tokens.$colour-surface;
+}
+
+.uk-date-selector {
+  position: relative;
+}
+.uk-date-range {
+  display: flex;
+  gap: tokens.$spacing-md;
+  border: 0;
+  padding: 0;
+}
+
+.uk-calendar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: tokens.$spacing-sm;
+}
+
+.uk-calendar__month {
+  font-weight: 600;
+}
+
+.uk-calendar__nav {
+  border: 0;
+  background: none;
+  cursor: pointer;
+  padding: 0 tokens.$spacing-sm;
+}
+
+.uk-calendar__grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.uk-calendar__weekday {
+  font-size: 11px;
+  text-align: center;
+  color: tokens.$colour-muted;
+}
+
+.uk-calendar__blank {
+  visibility: hidden;
+}

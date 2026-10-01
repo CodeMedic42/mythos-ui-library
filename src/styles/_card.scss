@@ -1,0 +1,11 @@
+@use './tokens' as tokens;
+
+.uk-card {
+  padding: tokens.$spacing-md;
+}
+.uk-card__title {
+  margin-bottom: tokens.$spacing-sm;
+}
+.uk-card__body {
+  display: block;
+}
